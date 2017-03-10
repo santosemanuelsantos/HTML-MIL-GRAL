@@ -23,13 +23,21 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/login',
     views:{
       'view-inicial': {
-        templateUrl: "templates/login.html",
-        controller: "Dashctrl"
+        templateUrl: "templates/login.html"
       }
      }
-  });  
+  })  
 
-  
+.state('cadastro', {
+    url: '/cadastro',
+    views:{
+      'view-inicial': {
+        templateUrl: "templates/cadastro.html"
+      }
+     }
+  })  
+
+    
 
 
   $urlRouterProvider.otherwise('/login');
