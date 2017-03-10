@@ -35,8 +35,16 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         templateUrl: "templates/cadastro.html"
       }
      }
-  })  
-
+  }) 
+   
+.state('tarefas', {
+    url: '/tarefas',
+    views:{
+      'view-inicial': {
+        templateUrl: "templates/tarefas.html"
+      }
+     }
+  })
     
 
 
