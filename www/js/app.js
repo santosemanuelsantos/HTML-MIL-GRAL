@@ -17,13 +17,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
+ 
  $stateProvider
-
-    .state('login', {
-    url: '/login',
+  
+   .state('Login', {
+    url: '/Login',
     views:{
       'view-inicial': {
-        templateUrl: "templates/login.html"
+        templateUrl: "templates/Login.html",
+        controller: 'LoginCtrl'
       }
      }
   })  
@@ -32,7 +34,8 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/cadastro',
     views:{
       'view-inicial': {
-        templateUrl: "templates/cadastro.html"
+        templateUrl: "templates/cadastro.html",
+        controller: 'LoginCtrl'
       }
      }
   }) 
@@ -41,14 +44,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     url: '/tarefas',
     views:{
       'view-inicial': {
-        templateUrl: "templates/tarefas.html"
+        templateUrl: "templates/tarefas.html",
+        controller: "tarefasCtrl"
       }
      }
   })
     
 
 
-  $urlRouterProvider.otherwise('/login');
+  $urlRouterProvider.otherwise('/Login');
 
 
 });

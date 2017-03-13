@@ -1,15 +1,9 @@
 <ion-view view-title= "html-m1l-gr4l">
     <ion-content></ion-content> 
       <ul class="list">
-            <li class="item">
-                   tarefa 01 
-            </li>
-         <li class="item">
-                    tarefa 02 
-             </li>
-         <li class="item">
-                     tarefa 03
-             </li>
+            <li class="item" ng-repeaty="tarefa in tarefas">
+         {{tarefa.nome}}
+         </li>
       </ul>
  
     </ion-content> 
