@@ -45,7 +45,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     views:{
       'view-inicial': {
         templateUrl: "templates/tarefas.html",
-        controller: "tarefasCtrl"
+        controller: "TarefasCtrl"
       }
      }
   })

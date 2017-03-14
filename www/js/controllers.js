@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-.controller('LoginCtrl', function($scope) {
+.controller('LoginCtrl', function($scope, login) {
   $scope.email = "";
   $scope.senha = "";
 
@@ -8,10 +8,11 @@ angular.module('starter.controllers', [])
     alert(email+senha);
   }
   $scope.novoCadastro= function(email, senha){
-    alert(email+ ' - ' + senha);
+    login.novo(email, senha, function(erro){
+      alert(erro);
+    });
   }
 })
-
 .controller("TarefasCtrl",function($scope) {
   $scope.tarefas = [
     {
@@ -19,6 +20,9 @@ angular.module('starter.controllers', [])
     },
     {
       nome: 'tarefa 02'
+    },
+    {
+      nome: 'tarefa 03'
     }
   ];
 })
